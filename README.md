@@ -2,7 +2,7 @@
 
 ---
 
-## 🏗️ Overview
+## Overview
 
 This repository presents a **novel image captioning architecture** that integrates **frequency-domain spectral attention**, **dual-branch visual reasoning**, and **instruction-tuned visual language model (VLM) refinement** for generating accurate, detailed, and grounded image captions.
 
@@ -10,7 +10,7 @@ The framework fuses **YOLOv8-based object detection** and **Xception-based scene
 
 ---
 
-## 🔍 Key Contributions
+## Key Contributions
 
 * **Dual-Stream Encoder:** Object-level features from YOLOv8 + scene-level features from Xception.
 * **Dual Bahdanau Attention:** Independent attention over object and scene embeddings.
@@ -34,66 +34,14 @@ The framework fuses **YOLOv8-based object detection** and **Xception-based scene
 
 ---
 
-## 📦 Installation
+Base Paper Repository
 
-### Requirements
+This work builds upon and extends the baseline architecture from the following open-source repository:
 
-```
-Python >= 3.10
-TensorFlow >= 2.12
-torch >= 2.0
-opencv-python==4.6.0.66
-numpy < 1.27
-matplotlib
-tqdm
-pycocotools
-pandas
-```
+[abdelhadie-amalla/image_captioning
+](https://github.com/abdelhadie-almalla/image_captioning)
 
-### Setup
-
-```bash
-git clone https://github.com/<your-username>/Spectral-Captioning-VLM.git
-cd Spectral-Captioning-VLM
-pip install -r requirements.txt
-```
-
-To install YOLOv8:
-
-```bash
-pip install ultralytics
-```
-
----
-
-## 🧠 Training Pipeline
-
-### 1. Prepare the MSCOCO-2014 dataset
-
-```
-/datasets/coco2014/
- ├── train2014/
- ├── val2014/
- └── annotations/
-```
-
-### 2. Extract Features
-
-```bash
-python extract_features.py
-```
-
-### 3. Train the Model
-
-```bash
-python train_spectral_captioning.py
-```
-
-### 4. Evaluate Metrics
-
-```bash
-python evaluate_coco_metrics.py
-```
+Our framework enhances the original CNN–GRU pipeline with dual attention, frequency-domain fusion, spectral attention, and instruction-tuned VLM caption refinement.
 
 ---
 
@@ -114,13 +62,13 @@ python evaluate_coco_metrics.py
 
 | Image | Baseline Caption     | Proposed Model Output                                                                |
 | ----- | -------------------- | ------------------------------------------------------------------------------------ |
-| 🏂    | “People skiing.”     | “A group of skiers descend a snow-covered mountain under cloudy skies.”              |
-| 🐕    | “A dog playing.”     | “A brown dog runs across the grass chasing a yellow tennis ball in a sunny park.”    |
+| 🏂    | “People skiing on the snow.”     | "A group of skiers skiing a snow-covered mountain under clouds.”              |
+| 🐕    | “A dog playing with balls.”     | “A brown dog runs across the grass chasing a yellow tennis ball in a sunny park.”    |
 | 🚆    | “A train on tracks.” | “A modern train passes through an urban station surrounded by tall glass buildings.” |
 
 ---
 
-## 🧩 Future Work
+## Future Work
 
 * Integrating Vision Transformers for encoder replacement
 * RLHF-based caption diversity enhancement
