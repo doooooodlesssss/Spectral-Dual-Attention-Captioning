@@ -22,7 +22,7 @@ The framework fuses **YOLOv8-based object detection** and **Xception-based scene
 
 ---
 
-## 🧩 Architecture Summary
+## Architecture Summary
 
 1. Input Image
 2. YOLOv8 + Xception Feature Extraction
@@ -45,7 +45,7 @@ Our framework enhances the original CNN–GRU pipeline with dual attention, freq
 
 ---
 
-## 📊 Quantitative Results
+## Quantitative Results
 
 | Model                    | BLEU-1    | BLEU-4    | METEOR    | ROUGE-L   | CIDEr     | SPICE     |
 | ------------------------ | --------- | --------- | --------- | --------- | --------- | --------- |
@@ -58,7 +58,7 @@ Our framework enhances the original CNN–GRU pipeline with dual attention, freq
 
 ---
 
-## 🎯 Qualitative Examples
+## Qualitative Examples
 
 | Image | Baseline Caption     | Proposed Model Output                                                                |
 | ----- | -------------------- | ------------------------------------------------------------------------------------ |
