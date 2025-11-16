@@ -1,6 +1,4 @@
-**"A Frequency-Domain Dual Attention and Spectral Fusion Framework for Robust Image Captioning with Instruction-Tuned VLM Caption Refinement."**
-
----
+**A Frequency-Domain Dual Attention and Spectral Fusion Framework for Robust Image Captioning with Instruction-Tuned VLM Caption Refinement.**
 
 ## Overview
 
@@ -31,6 +29,12 @@ This framework improves upon classical CNN+RNN architectures, resulting in impro
 
 ---
 
+## Codebase & Notebooks
+* **Main Project Code:** The main, runnable code for the entire project is located at:
+    `src/improv_imgcap.py`
+
+* **Colab Notebooks:** All experimental and development notebooks used for this project are located in the `colab_nb/` folder.
+
 ## Base Repository
 This work builds upon and extends the baseline architecture from the following open-source repository:
 
@@ -47,11 +51,9 @@ Our framework enhances the original CNN–GRU pipeline with dual attention, freq
     source venv/bin/activate
     pip install -r requirements.txt
     ```
-2.  Place your original script (the file you uploaded) as:
-    ```bash
-    src/original_imgcap.py
-    ```
-    *(Note: Do not rename the internal code — keep it unchanged)*
+
+2.  The main execution script is `src/improv_imgcap.py`.
+
 3.  Edit `configs/config.yaml` to point to your local dataset and weight locations.
 
 ---
@@ -75,19 +77,6 @@ Run the main project stages using the provided scripts:
     ```bash
     bash scripts/refine_captions.sh
     ```
-
----
-
-## Project Structure
-
-SpectralCaptioning-VLM/
-├── README.md
-├── requirements.txt
-├── configs/config.yaml
-├── src/original_imgcap.py 
-├── src/vlm_refiner_wrapper.py 
-├── src/helpers.py
-└── scripts/*.sh 
 
 ---
 
